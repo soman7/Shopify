@@ -1,0 +1,36 @@
+{% extends "shopify/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Checkout
+{% endblock %}
+
+{% block content %}
+    <script src="https://kit.fontawesome.com/2bb7cbdfe8.js" crossorigin="anonymous"></script>
+    <h1>Checkout</h1>
+
+    <div class="order-info">
+        <h3><i class="fab fa-shopify"></i>Your Order</h3>
+        <ul>
+            {% for item in cart %}
+                <li>
+                    {{ item.quantity }}x   {{ item.product.name }}
+                    <span>Rs.{{ item.total_price|floatformat:2 }}</span>
+                </li>
+            {% endfor %}
+            {% if cart.coupon %}
+                <li style="font-weight: bolder;color: darkgoldenrod;">
+                    "{{ cart.coupon.code }}"({{ cart.coupon.discount }}% OFF)
+                    <span>-Rs.{{ cart.get_discount|floatformat:2 }}</span>
+                </li>
+            {% endif %}
+        </ul>
+        <p>Total:Rs.{{ cart.get_total_price_after_discount|floatformat:2 }}</p>
+    </div>
+
+    <form method="post" class="order-form">
+        {{ form|crispy }}
+        <p><input type="submit" value="Place Order"></p>
+        {% csrf_token %}
+    </form>
+{% endblock %}
