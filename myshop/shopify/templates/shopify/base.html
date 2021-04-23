@@ -3,15 +3,15 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>{% block title %}Shopify{% endblock %}</title>
+        <title>{% block title %}e-Shopper{% endblock %}</title>
         <link href="{% static 'shopify/base.css' %}" rel="stylesheet">
     </head>
     <script src="https://kit.fontawesome.com/2bb7cbdfe8.js" crossorigin="anonymous"></script>
     <body>
         <div id="header">
-            <a href="/" class="logo"><i class="fas fa-shoe-prints fa-rotate-270"></i>Shopify</a>
+            <a href="/" class="logo"><i class="fas fa-shoe-prints fa-rotate-270"></i>e-Shopper</a>
             {% if user.is_authenticated %}
-                        <strong class="nav-item nav-link" style="color: cadetblue; position: absolute;top: 50px;right: 120px;">Hello {{ user.first_name }}!</strong>
+                        <strong class="nav-item nav-link" style="color: aliceblue; position: absolute;top: 50px;right: 120px;">Hello {{ user.first_name }}!</strong>
             {% endif %}
         </div>
         <header class="site-header">

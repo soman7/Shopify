@@ -16,13 +16,13 @@ h1, h2, h3, h4, h5 , h6 {
     font-family: 'Source Code Pro', monospace;
     font-weight:bolder;
     font-size: x-large;
-    color: cadetblue;
+    color: black;
 }
 
 a {
     text-decoration:none;
     color:#9DAAF2;
-    color: cadetblue;
+    color: black;
     font-family: 'Oswald', sans-serif;;
 }
 
@@ -148,7 +148,7 @@ ul.errorlist {
 #header .logo {
     font-family: 'Caveat', cursive;
     float:left;
-    color:cadetblue;
+    color:aliceblue;
     font-size:xxx-large;
     margin-right:10%;
 }
@@ -163,7 +163,7 @@ ul.errorlist {
 #content {
     padding:100px 100px;
     overflow:hidden;
-    background: white;
+    background: aliceblue;
 }
 
 #sidebar {
@@ -185,16 +185,16 @@ ul.errorlist {
 #sidebar ul li a {
     display:block;
     font-family:'Oswald', sans-serif;;
-    color: cadetblue;
+    color: black;
 }
 
 #sidebar ul li.selected {
-    background:cadetblue;
+    background:black;
     border-radius:4px;
 }
 
 #sidebar ul li.selected a {
-    color:#fff;
+    color:aliceblue;
 }
 
 #main {
