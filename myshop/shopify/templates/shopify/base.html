@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/2bb7cbdfe8.js" crossorigin="anonymous"></script>
     <body>
         <div id="header">
-            <a href="/" class="logo"><i class="fas fa-shoe-prints fa-rotate-270"></i>e-Shopper</a>
+            <a href="/" class="logo">e-Shopper</a>
             {% if user.is_authenticated %}
                         <strong class="nav-item nav-link" style="color: aliceblue; position: absolute;top: 50px;right: 120px;">Hello {{ user.first_name }}!</strong>
             {% endif %}
